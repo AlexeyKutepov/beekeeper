@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% load cms_tags static %}
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+
+{% block content %}
+	    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Page Heading/Breadcrumbs -->
+      <h1 class="mt-4 mb-3">Контакты</h1>
+      <hr>
+
+      <!-- Content Row -->
+      <div class="row">
+        <!-- Map Column -->
+        <div class="col-lg-8 mb-4">
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A7c02827e1f9004ae47be8c32caadd54f61b497cf2632355e5e9ba1a519905c54&amp;lang=ru_RU&amp;scroll=true&amp;source=constructor" width="100%" height="450" frameborder="0"></iframe>
+        </div>
+        <!-- Contact Details Column -->
+        <div class="col-lg-4 mb-4">
+          <h3>Контактная информация</h3>
+            <p></p>
+          <p>
+            Орловская область, г. Мценск, ул. Ленина, д. 13
+          </p>
+          <p>
+            <i class="fa fa-phone" aria-hidden="true"></i> +7 953 81-81-239
+          </p>
+          <p>
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <a href="mailto:info@пчеловод-рязанцев.рф">info@пчеловод-рязанцев.рф
+            </a>
+          </p>
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <!-- Contact Form -->
+      <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+      <div class="row">
+        <div class="col-lg-8 mb-4">
+          <h3>Написать сообщение</h3>
+          <form name="sentMessage" id="contactForm" novalidate>
+            <div class="control-group form-group">
+              <div class="controls">
+                <label>Имя:</label>
+                <input type="text" class="form-control" id="name" required data-validation-required-message="Пожалуйста, введите своё имя!">
+                <p class="help-block"></p>
+              </div>
+            </div>
+            <div class="control-group form-group">
+              <div class="controls">
+                <label>Телефон:</label>
+                <input type="tel" class="form-control" id="phone" required data-validation-required-message="Пожалуйста, введите номер телефона!">
+              </div>
+            </div>
+            <div class="control-group form-group">
+              <div class="controls">
+                <label>Email:</label>
+                <input type="email" class="form-control" id="email" required data-validation-required-message="Пожалуйста, введите адрес электронной почты!">
+              </div>
+            </div>
+            <div class="control-group form-group">
+              <div class="controls">
+                <label>Сообщение:</label>
+                <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Пожалуйста, введите текст сообщения!" maxlength="999" style="resize:none"></textarea>
+              </div>
+            </div>
+            <div id="success"></div>
+            <!-- For success/fail messages -->
+            <button type="submit" class="btn btn-primary">Отправить</button>
+          </form>
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+{% endblock content %}
